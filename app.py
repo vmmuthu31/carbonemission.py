@@ -6,12 +6,10 @@ import os
 
 app = Flask(__name__)
 
-# Load the dataset
-df = pd.read_csv('path_to_your_csv/Agrofood_co2_emission.csv')
+df = pd.read_csv('data/Agrofood_co2_emission.csv')
 
 @app.route('/')
 def index():
-    # The main page of the application
     return render_template('index.html')
 
 @app.route('/heatmap')
